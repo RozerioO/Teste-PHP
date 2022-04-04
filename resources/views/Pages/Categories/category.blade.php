@@ -32,7 +32,7 @@
         <div class="card mt-2" style="width: 20rem;">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">{{$category->name}}
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-between mt-2">
                         <form method="post" action="/category/{{$category->id}}/edit">
                             @csrf
                             <input type="hidden" name="id" value="{{$category->id}}"/>

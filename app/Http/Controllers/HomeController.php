@@ -10,6 +10,6 @@ class HomeController extends Controller
     {
         $posts = Post::with('user')->get();
 
-        return view('pages.home',compact('posts'));
+        return view('Pages.home',compact('posts'));
     }
 }

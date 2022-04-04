@@ -14,12 +14,12 @@
                     @csrf
                     <div class="form-group">
                         <label for="title">Digite o novo Titulo</label>
-                        <input type="text" class="form-control" name="title" id="title" placeholder="{{$post->title}}">
+                        <input type="text" class="form-control" name="title" id="title" placeholder="{{$post->title}}" value="{{$post->title}}">
                     </div>
 
                     <div class="form-group">
                         <label for="subtitle">Digite o novo Subtitulo</label>
-                        <input type="text" class="form-control" name="subtitle" id="subtitle"  placeholder="{{$post->subtitle}}">
+                        <input type="text" class="form-control" name="subtitle" id="subtitle"  placeholder="{{$post->subtitle}}" value="{{$post->subtitle}}">
                     </div>
                     <div class="form-floating">
                         <label for="floatingSelect">Selecione uma nova categoria para o POST: </label>
@@ -31,9 +31,9 @@
                     </div>
                     <div class="form-group">
                         <label for="text"></label>
-                        <textarea class="form-control" name="text" id="text" rows="3"placeholder="{{$post->text}}"></textarea>
+                        <textarea class="form-control" name="text" id="text" rows="20"placeholder="{{$post->text}}">{{$post->text}}</textarea>
                     </div>
-                    <button class="btn btn-primary"> Criar</button>
+                    <button class="btn btn-primary"> Salvar</button>
                 </form>
             </div>
 @endsection

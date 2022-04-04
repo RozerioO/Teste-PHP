@@ -15,13 +15,13 @@ class PostsController extends Controller
     {
         $posts = Post::with('user')->get();
 
-        return view('pages.mainposts', compact('posts'));
+        return view('Pages.Posts.mainposts', compact('posts'));
     }
 
     public function create()
     {
         $categories = Category::all();
-        return view('pages.createposts', compact('categories'));
+        return view('Pages.Posts.createposts', compact('categories'));
     }
 
     public function store(Request $request)
@@ -42,7 +42,7 @@ class PostsController extends Controller
 
         $categories = Category::all();
         $post = Post::find($id);
-        return view('pages.editpost', ["post" => $post],["categories"=> $categories]);
+        return view('Pages.Posts.editpost', ["post" => $post],["categories"=> $categories]);
     }
 
     public function edit(Request $request, $id)

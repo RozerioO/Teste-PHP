@@ -14,7 +14,7 @@ class UserController extends Controller
     {
         $users = User::all();
 
-        return view('pages.userpage', compact('users'));
+        return view('Pages.User.userpage', compact('users'));
     }
 
     public function authenticate(Request $request)
@@ -26,10 +26,10 @@ class UserController extends Controller
        return redirect('/home');
     }
 
-    public function show(Request $id)
+    public function show(Request $request, $id)
     {
-        $users=User::find($id);
-        return view('pages.edituser', compact('users'));
+        $user=User::find($id);
+        return view('Pages.User.edituser', compact('user'));
     }
 
     public function edit(Request $request, $id)

@@ -9,24 +9,23 @@
 @endsection
 
 @section('content')
-    @foreach($users as $user)
         <form method="post" action="/user/{{$user->id}}/save">
             @csrf
             <div class="container mt-4 w-25">
+                @include('messages.errors',['errors' => $errors])
                 <div class="card mt-2 text-center" style="width: 19rem;">
                     <div class="card-body">
                         Digite o novo usuário:
-                        <input class="form-control mt-2" type="text" id="name" name="name" placeholder="Usuário" aria-label="default input example">
+                        <input class="form-control mt-2" type="text" id="name" name="name" placeholder="{{$user->name}}" value="{{$user->name}}">
                         Digite o novo e-mail:
-                        <input class="form-control mt-2" type="text" id="email" name="email" placeholder="E-mail" aria-label="default input example">
+                        <input class="form-control mt-2" type="text" id="email" name="email" placeholder="{{$user->email}}" value="{{$user->email}}">
                         Digite a nova senha:
-                        <input class="form-control mt-2" type="password" id="password" name="password" placeholder="Minimo 8 Digitos" aria-label="default input example">
+                        <input class="form-control mt-2" type="password" id="password" name="password" placeholder="Minimo 8 Digitos">
                         <div class="d-flex justify-content-center">
-                            <button type="submit" class="btn btn-primary mt-2">Editar</button>
+                            <button type="submit" class="btn btn-primary mt-2">Salvar</button>
                         </div>
                     </div>
                 </div>
             </div>
         </form>
-    @endforeach
 @endsection

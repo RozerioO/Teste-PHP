@@ -9,7 +9,7 @@ class LoginController
 {
     public function index()
     {
-        return view('pages.login');
+        return view('Pages.Login_Register.login');
     }
 
     public function login(Request $request)

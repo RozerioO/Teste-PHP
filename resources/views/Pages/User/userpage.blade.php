@@ -16,11 +16,7 @@
                     <h5 class="card-title">{{ $user->name }}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">{{ $user->email }}</h6>
                     <div class="d-flex justify-content-between mt-4">
-                        <form method="post" action="/user/{{$user->id}}/edit">
-                            @csrf
-                            <input type="hidden" name="id" value="{{$user->id}}">
-                            <button class="btn btn-primary">Editar</button>
-                        </form>
+                            <a href="/user/{{$user->id}}/edit" class="btn btn-primary">Editar</a>
                         <form method="post" action="/user/delete">
                             @csrf
                             <input type="hidden" name="id" value="{{$user->id}}"/>

@@ -11,7 +11,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories=Category::all();
-        return view('pages.category', compact('categories'));
+        return view('Pages.Categories.category', compact('categories'));
     }
 
     public function store(Request $request)
@@ -25,7 +25,7 @@ class CategoryController extends Controller
     public function show(Request $id)
     {
         $categories = Category::find($id);
-        return view('pages.editcategory', compact('categories'));
+        return view('Pages.Categories.editcategory', compact('categories'));
     }
 
     public function edit(Request $request, $id)

@@ -13,7 +13,7 @@ Route::get('posts/{id}/edit', [\App\Http\Controllers\PostsController::class,'sho
 Route::post('posts/{id}/save', [\App\Http\Controllers\PostsController::class,'edit'])->middleware('auth');
 
 Route::get('/user',[\App\Http\Controllers\UserController::class,'index'])->middleware('auth');
-Route::post('/user/{id}/edit',[\App\Http\Controllers\UserController::class,'show'])->middleware('auth');
+Route::get('/user/{id}/edit',[\App\Http\Controllers\UserController::class,'show'])->middleware('auth');
 Route::post('/user/{id}/save',[\App\Http\Controllers\UserController::class,'edit'])->middleware('auth');
 Route::delete('/user/delete',[\App\Http\Controllers\UserController::class,'destroy'])->middleware('auth');
 
