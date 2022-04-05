@@ -31,7 +31,7 @@
             </button>
 
             <a href="/register" class="btn btn-secondary mt-2">
-                Registrar-se
+                Registre-se
             </a>
         </form>
     </div>

@@ -30,7 +30,7 @@
             </div>
 
             <button type="submit" class="btn btn-primary mt-3">
-                Registrar-se
+                Registre-se
             </button>
         </form>
     </div>
